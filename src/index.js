@@ -6,15 +6,17 @@ import App from './App';
 import Graficas from './components/graficas'
 import Serial from './components/serial'
 import reportWebVitals from './reportWebVitals';
-
+import Navbar from './components/navbar'
+import 'bootstrap/dist/css/bootstrap.min.css' 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<App/>}/>
-        <Route path='Graficas' element={<Graficas/>} />
-        <Route path='Serial' element={<Serial/>} />
+        <Route path='/Graficas' element={<Graficas/>} />
+        <Route path='/Serial' element={<Serial/>} />
       </Routes>
       
     </BrowserRouter>

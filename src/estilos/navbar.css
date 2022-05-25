@@ -4,8 +4,10 @@ header{
   width: 100%; /* Full width */
 }
 #contenido{
-  margin-top: 90px;
+  margin-top: 80px;
   margin-left: 10px;
+  
+   
 }
 #fil1,#fil2,#fil3,#sep{
   width: 100%;
@@ -18,7 +20,7 @@ header{
 
 ul{
     list-style-type: none;
-    background-color: #457b9d;
+    background-color: #031a6b;
     overflow: hidden;
     margin: 0;
     padding: 0;

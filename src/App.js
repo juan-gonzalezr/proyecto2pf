@@ -1,28 +1,20 @@
 import { Link } from "react-router-dom";
-import logo from './estilos/logo.png';
-import logo1 from './estilos/sistemaMonitoreo.png';
-import facebook from './icon/facebook.png'
-import instagram from './icon/instagram.png'
-import youtube from './icon/youtube.png'
-import github from './icon/github.png'
+import logo from './assets/logo.png';
+import logo1 from './assets/sistemaMonitoreo.png';
+import facebook from './assets/icon/facebook.png'
+import instagram from './assets/icon/instagram.png'
+import youtube from './assets/icon/youtube.png'
+import github from './assets/icon/github.png'
 import './App.css';
-
+import Navbar from './components/navbar'
 import './estilos/navbar.css'
 import graficas from './components/graficas';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-            
-          <ul>
-            <li><a><Link to='/'><img id="im1" src={logo} className="App-logo" alt="logo" /></Link></a></li>
-            <li><a><Link to='/'>Inicio</Link></a></li>
-            <li><a><Link to='Graficas'>Graficas</Link></a></li>
-            <li><a><Link to='Serial'>Serial</Link></a></li>
-          </ul>
-                
-      </header>
+      <Navbar/>
+      
       <div id="contenido">
         <div id="fil1">
           <div id="col1a">
@@ -78,15 +70,15 @@ function App() {
 
 
 
-      <div id="foot">
-        <h2>Contactenos</h2>
-        <ul id="ul1">
-          <li id="li1" ><a href="https://www.facebook.com" target="_blanck"><img src={facebook} width="30" /></a></li>
-          <li id="li1"><a href="https://www.instagram.com" target="_blanck"><img src={instagram} width="30" /></a></li>
-          <li id="li1"><a href="https://www.youtube.com" target="_blanck"><img src={youtube} width="30" /></a></li>
-          <li id="li1"><a href="https://github.com/juan-gonzalezr" target="_blanck"><img src={github} width="30" /></a></li>
-        </ul>
-      </div>  
+        <div id="foot">
+          <h2>Contactenos</h2>
+          <ul id="ul1">
+            <li id="li1" ><a href="https://www.facebook.com" target="_blanck"><img src={facebook} width="30" /></a></li>
+            <li id="li1"><a href="https://www.instagram.com" target="_blanck"><img src={instagram} width="30" /></a></li>
+            <li id="li1"><a href="https://www.youtube.com" target="_blanck"><img src={youtube} width="30" /></a></li>
+            <li id="li1"><a href="https://github.com/juan-gonzalezr" target="_blanck"><img src={github} width="30" /></a></li>
+          </ul>
+        </div>  
       
       </div>
     </div>
