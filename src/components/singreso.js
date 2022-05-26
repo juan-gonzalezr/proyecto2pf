@@ -47,7 +47,7 @@ state1={
     return (
 
       <div className='row'>
-        <div className='col-md-4 card text-center bg-dark' >
+        <div className='col-md-12 card text-center bg-dark' >
           <card>
             <form onSubmit={this.onSubmit}>
               <br />
@@ -63,24 +63,61 @@ state1={
             </form>
           </card>
         </div>
-
-        <div className='col-md-8 card text-center bg-dark'>
+        <div className='col-md-2 card text-center bg-dark'>
           <ul className='list-group'>
 
 
                 {
                 this.state.datos.map(dato=> <li className='list-group list-group-item-action' key={dato._id}>
-                  {dato.date}
+                  {dato._id}
+                  
                 </li>
                   )
                 }
+                
 
 
                 
             </ul>
               
         </div>
-        
+
+        <div className='col-md-6 card text-center bg-dark'>
+          <ul className='list-group'>
+
+
+                {
+                this.state.datos.map(dato=> <li className='list-group list-group-item-action' key={dato._id}>
+                  {dato.date}
+                  
+                </li>
+                  )
+                }
+                
+
+
+                
+            </ul>
+              
+        </div>
+        <div className='col-md-4 card text-center bg-dark'>
+          <ul className='list-group'>
+
+
+                {
+                this.state.datos.map(dato=> <li className='list-group list-group-item-action' key={dato._id}>
+                  {dato.val}
+                  
+                </li>
+                  )
+                }
+                
+
+
+                
+            </ul>
+              
+        </div>
 
 
       </div>
