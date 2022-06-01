@@ -6,22 +6,23 @@ const cardis=[
 {
   id:1,
   title:'Sensor Acelerometro',
-  image:"https://thingspeak.com/channels/1729242/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Sensor+Acelerometro&type=line",
-  text:"Sensor acelerometro referencia"
+  image:"https://thingspeak.com/channels/1754544/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Sensor+Acelerometro&type=line&xaxis=Tiempo&yaxis=Voltage&yaxismax=5&yaxismin=0",
+  text:""
+
 
 },
 {
   id:2,
   title:'Sensor Humedad',
-  image:"https://thingspeak.com/channels/1729242/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Sensor+Humedad&type=line",
-  text:"Sensor de humedad referencia"
+  image:"https://thingspeak.com/channels/1754544/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Sensor+Humedad&type=line&xaxis=Tiempo&yaxis=Voltage&yaxismax=5&yaxismin=0",
+  text:""
           
 },
 {
   id:3,
   title:'Sensor Vibracion',
-  image:"https://thingspeak.com/channels/1729242/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Sensor+Vibraci%C3%B3n&type=line",
-  text:"Sensor de virbacion referencia"
+  image:"https://thingspeak.com/channels/1754544/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Sensor+Vibracion&type=line&xaxis=Tiempo&yaxis=Voltage&yaxismax=5&yaxismin=0",
+  text:""
         
 }
 
@@ -34,7 +35,7 @@ function cards() {
         <div className="row">
           {
             cardis.map(car=>(
-              <div className="col-md-4" key={car.id}>
+              <div className="col-md-5" key={car.id}>
             <Card1 title={car.title} imgSource={car.image} text={car.text}/>
           </div>
             ))

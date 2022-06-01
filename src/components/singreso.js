@@ -1,123 +1,78 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import DatosA from './datosA';
+import DatosV from './datosV'
+import DatosH from './datosH'
+
 export default class singreso extends Component {
 
 state={
-  datos:[],
-  direccion:""
+  
+  valor:""
 }
-state1={
-  id:"",
-  valor:"",
-  fecha:""
-}
+// state1={
+//   id:"",
+//   valor:"",
+//   fecha:""
+// }
 
 
   
-  async componentDidMount(){
-    const res = await axios.get("http://localhost:4000/Serial");
-    this.setState({datos:res.data})
+//   async componentDidMount(){
+//     const res = await axios.get("http://localhost:4000/Serial/data");
+//     this.setState({datos:res.data})
     
-    console.log(this.state.datos);
-  }
+//     console.log(this.state.datos);
+//   }
 
 
-  onHandleChange=(e) =>{
+ 
+  onChange= e=>{
     this.setState({
-      direccion : e.target.value}
-    )
-    console.log(e.target.value);
-
-
-  }
-  onSubmit=async e=>{
-    e.preventDefault();
-    const res=await axios.get("http://localhost:4000/Serial"+"/"+this.state.direccion)
+      valor : e.target.value}
+       )
+       //console.log("entro al onchange"); 
+       console.log(e.target.value);
+    
     //console.log(res.data);
+       // console.log(this.state.valor)
+      }
 
-    // this.setState1({
-    //   id:res.data._id,
-    //   valor:res.data.val,
-    //   fecha:res.data.createdAt
-    // })
-    console.log("http://localhost:4000/Serial"+"/"+this.state.direccion);
-  }
+
   render() {
-   
+    let component ;
+     if(this.state.valor==="DatA"){
+       component=<DatosA/>
+     }
+     if(this.state.valor==="DatV"){
+       component=<DatosV/>
+     }
+     if(this.state.valor==="DatH"){
+       component=<DatosH/>
+     }
+    
     return (
 
       <div className='row'>
-        <div className='col-md-12 card text-center bg-dark' >
+
+
+
+       <div className='col-md-12 card text-center bg-dark' >
           <card>
             <form onSubmit={this.onSubmit}>
               <br />
-            <p>
-                Direccion: <input  type="text" name="texto" placeholder="ingrese valor en hexa "
-                onChange={this.onHandleChange} />
-                </p>
-                <button type='submit' className='btn btn-primary' >
-                  Enviar
-                </button>
-                
-                
+              <select name="" id="" onChange={this.onChange}>
+                <option value="---"  >---</option>  
+                <option value="DatA"  >Acelerometro</option>
+                <option value="DatV"  >Vibración</option>
+                <option value="DatH"  >Humedad</option>
+              </select>
+                                                
             </form>
           </card>
-        </div>
-        <div className='col-md-2 card text-center bg-dark'>
-          <ul className='list-group'>
-
-
-                {
-                this.state.datos.map(dato=> <li className='list-group list-group-item-action' key={dato._id}>
-                  {dato._id}
-                  
-                </li>
-                  )
-                }
-                
-
-
-                
-            </ul>
-              
-        </div>
-
-        <div className='col-md-6 card text-center bg-dark'>
-          <ul className='list-group'>
-
-
-                {
-                this.state.datos.map(dato=> <li className='list-group list-group-item-action' key={dato._id}>
-                  {dato.date}
-                  
-                </li>
-                  )
-                }
-                
-
-
-                
-            </ul>
-              
-        </div>
-        <div className='col-md-4 card text-center bg-dark'>
-          <ul className='list-group'>
-
-
-                {
-                this.state.datos.map(dato=> <li className='list-group list-group-item-action' key={dato._id}>
-                  {dato.val}
-                  
-                </li>
-                  )
-                }
-                
-
-
-                
-            </ul>
-              
-        </div>
+        </div> 
+        {component}
+        
 
 
       </div>

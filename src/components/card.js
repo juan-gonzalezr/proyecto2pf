@@ -8,7 +8,7 @@ function card({title,imgSource,text}) {
   //console.log(props)
   return (
     <div className="card text-center bg-dark">
-      <iframe width="425 "   height="250" src={imgSource} ></iframe>
+      <iframe width="450 "   height="250" src={imgSource} ></iframe>
       <div className="card-body text-light">
         <h4 className="card-title">{title}</h4>
         <p className="card-text text-secondary">{text}</p>

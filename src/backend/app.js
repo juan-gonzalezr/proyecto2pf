@@ -11,9 +11,9 @@ app.use(express.json());
 
 
 //routes
-app.use('/Serial', require('./routes/data'))
-app.use('/Serial', require('./routes/datv'))
-app.use('/Serial', require('./routes/dath'))
+app.use('/Serial/data', require('./routes/data'))
+app.use('/Serial/datv', require('./routes/datv'))
+app.use('/Serial/dath', require('./routes/dath'))
 
 
 

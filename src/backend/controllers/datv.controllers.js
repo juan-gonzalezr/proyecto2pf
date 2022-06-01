@@ -3,7 +3,7 @@ const dataVCtrl={
 
 }
 
-const datoVModel=require('../models/datos')
+const datoVModel=require('../models/datov')
 
 
 dataVCtrl.getDatas =async (req,res)=>{

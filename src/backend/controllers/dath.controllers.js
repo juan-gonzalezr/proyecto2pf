@@ -3,7 +3,7 @@ const dataHCtrl={
 
 }
 
-const datoHModel=require('../models/datoh')
+const datoHModel=require('../models/datoh') 
 
 
 dataHCtrl.getDatas =async (req,res)=>{
@@ -20,7 +20,7 @@ dataHCtrl.postDatas=async (req,res)=>{
         val:val,
         date:date
     });
-    await newDatos.save()
+    await newDatos.save() 
     console.log(newDatos)
     res.json({"message":"Dato agregado"})
 } 
