@@ -18,8 +18,8 @@ function App() {
       <div id="contenido">
         <div id="fil1">
           <div id="col1a">
-            <h1>Quienes somos?</h1>
-              <p>Somos un grupo de estuiantes de ingenierie electronica, los cuales diseñamos una solucion a un problema
+            <h1 id="titulo1">Quienes somos?</h1>
+              <p id="parrafo1">Somos un grupo de estuiantes de ingenierie electronica, los cuales diseñamos una solucion a un problema
                 el cual era la medicion de variables refrenetes a un muro estructural el que sera construido en el departamento
                 de Manizales, Colombia. 
                 Se realizo una solucion iot para este proyecto, teniendo encuenta el manejo de 3 sensores que seran presentados 
@@ -31,7 +31,7 @@ function App() {
           </div>
         </div>
 
-        <div id="sep"><h2 >"Implementaciones CDIwO y Iot"</h2></div>
+        <div id="titulo2"><h2 >"Implementaciones Iot y CDIO"</h2></div>
         
 
         <div id="fil2">
@@ -50,16 +50,13 @@ function App() {
           
         </div>
 
-        <div id="sep"><h2 >"Implementaciones CDIwO y Iot"</h2></div>
+        <div id="sep"><h2 >"Diseños con seguimiento de requerimientos"</h2></div>
 
         <div id="fil3">
           <div id="col1c">
-            <h1>unicos</h1>
-              <p>Somos un grupo de estuiantes de ingenierie electronica, los cuales diseñamos una solucion a un problema
-                el cual era la medicion de variables refrenetes a un muro estructural el que sera construido en el departamento
-                de Manizales, Colombia. 
-                Se realizo una solucion iot para este proyecto, teniendo encuenta el manejo de 3 sensores que seran presentados 
-                a continuacion. 
+            <h1>P2 grupo SaS</h1>
+              <p>Calidad, beneficio y responsabilidad, pilares fundamentales de P2 grupo SaS, donde nos enfocamos en
+                el mejor uso y manejo de las ideas para la creacion y desarrollo de proyectos a pequeña y gran escala
               </p>
           </div>
           <div id="col2c">

@@ -55,6 +55,12 @@ state1={
             Hora: <input  type="text" name="texto" placeholder="AAAA-MM-DDTHH:MM:SS.###Z "
                 onChange={this.onHandleChange} />
                 </p>
+                <p>Modo Normal</p>
+                <input type="radio" id="css" name="fav_language" value="CSS"></input>
+                
+                <p>Modo Bajo Consumo</p><input type="radio" id="css" name="fav_language" value="CSS"/>
+                                               
+                <br></br>
                 <button type='submit' className='btn btn-primary' >
                   Enviar
                 </button>

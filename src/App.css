@@ -12,3 +12,13 @@
    
     background: linear-gradient(90deg, rgba(64,4,6,1) 0%, rgba(96,92,94,1) 50%, rgba(132,153,177,1) 71%, rgba(3,26,107,1) 90%);
 }
+#titulo1{
+    color:white
+}
+#parrafo1{
+    color:white
+}
+#titulo2{
+    color:wheat;
+    text-align: center;
+}

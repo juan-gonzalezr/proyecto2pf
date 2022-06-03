@@ -229,7 +229,7 @@ URL_THING="https://api.thingspeak.com/update?api_key=5AHT0A01ZIBHIU5S"
 URL_M_BDA=""
 URL_M_BDV=""
 URL_M_BDH=""
-while estado<30:
+while estado<300:
     
     trama1=ser.readline().decode("ascii")
    # print(trama1)
@@ -313,11 +313,10 @@ while estado<30:
         print(DatosThing)
             
         if cont ==3:
-                print("ingreso al if de peticiones",cont)
                 cont=0
                 
                 reqThingHV=r.post(URL_THING,data=DatosThing)
-                #reqThingA=r.post(URL_THING_AV,data=json.dumps(DatosThing))
+               
                 print("peticiones de thing enviadas")
                 DatosThing["field1"]=""
                 DatosThing["field2"]=""
